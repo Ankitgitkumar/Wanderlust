@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+    <h3>Create a New Listing</h3>
+<br>
+
+    <form method="POST" action="/listings" novalidate class="needs-validation">
+        
+        <div class="mb-3">
+            <lable for="title" class="form-label">Title</lable>
+            <input name="listing[title]" placeholder="enter title"  type="text" class="form-control" required>
+            <div class="valid-feedback">Title looks good!</div>
+            <div class="invalid-feedback">Title is required</div>
+        </div>
+        <div class="mb-3">
+            <lable for="description" class="form-label">Description</lable>
+            <textarea name="listing[description]" placeholder="enter description" type="text" class="form-control" required > </textarea>
+            <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+        
+        <div class="mb-3">
+            <lable for="image" class="form-label">URL</lable>
+            <input name="listing[image]" placeholder="enter image URL/Link" type="text" class="form-control" required>
+        </div>
+        <div class="row">
+        <div class="mb-3 col-md-4">
+            <lable for="price" class="form-label">Price</lable>
+            <input name="listing[price]" placeholder="enter price" type="numbe" class="form-control" required>
+            <div class="invalid-feedback">Price should be valid</div>
+            </div>
+        
+        
+        <div class="mb-3 col-md-8">
+            <lable for="country" class="form-label">Country</lable>
+            <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required>
+            <div class="invalid-feedback">Country name should be valid</div>
+        </div>
+        </div>
+        <div class="mb-3">
+            <lable for="location" class="form-label">Location</lable>
+            <input name="listing[location]" placeholder="enter location" type="text" class="form-control" required>
+            <div class="invalid-feedback">Location should be valid</div>
+        </div>
+        
+        <br>
+
+        <button class="btn btn-dark add-btn">Add</button>
+        <br><br>
+    </form>
+    </div>
+</div>
